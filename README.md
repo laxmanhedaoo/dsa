@@ -4,6 +4,8 @@ DSA, or Data Structures and Algorithms, forms the backbone of computer science a
 1. **Definition:**
     - Data Structures are specialized formats for organizing and storing data, while Algorithms are step-by-step procedures or formulas for solving problems.
 
+
+
 2. **Importance:**
     - DSA is fundamental to computer science and programming because it provides methods to organize and process data effectively, leading to optimized solutions for various computational problems.
 
