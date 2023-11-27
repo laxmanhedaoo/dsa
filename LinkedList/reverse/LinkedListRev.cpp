@@ -25,7 +25,7 @@ class LinkedList {
         }
 
         // Function to insert a node at the beginning
-        void insertAtBeginning(int val) {
+        void insertAtStart(int val) {
             Node* newNode = new Node(val);
             newNode->next = head;
             head = newNode;
@@ -49,10 +49,10 @@ class LinkedList {
         void traverse() {
             Node* current = head;
             while (current != NULL) {
-                std::cout << current->data << " ";
+                std::cout << current->data << " -> ";
                 current = current->next;
             }
-            std::cout << std::endl;
+            std::cout << "NULL" << std::endl;
         }
 };
 
@@ -60,9 +60,9 @@ int main(){
     
     LinkedList linkedList;
 
-    linkedList.insertAtBeginning(3);
-    linkedList.insertAtBeginning(2);
-    linkedList.insertAtBeginning(1);
+    linkedList.insertAtStart(30);
+    linkedList.insertAtStart(20);
+    linkedList.insertAtStart(10);
     
     std::cout << "Original List: ";
     linkedList.traverse();

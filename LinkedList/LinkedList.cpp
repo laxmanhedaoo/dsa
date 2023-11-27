@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Defining Node Object with its data and reference field
 
 class Node { 
 public:  
@@ -15,6 +16,7 @@ public:
     } 
 }; 
 
+// Defining LinkedList with basic operations
 class LinkedList {
 
     public: 
@@ -25,56 +27,20 @@ class LinkedList {
         }
 
         // Function to insert a node at the beginning
-        void insertAtBeginning(int val) {
+        void insertNode(int val) {
             Node* newNode = new Node(val);
             newNode->next = head;
             head = newNode;
         }
 
-
-        // Function to insert a node at the end
-        void insertAtEnd(int val) {
-            Node* newNode = new Node(val);
-
-            if (head == NULL) {
-                head = newNode;
-                return;
-            }
-
-            Node* current = head;
-            while (current->next != NULL) {
-                current = current->next;
-            }
-
-            current->next = newNode;
-        }
-
-        // Function to insert a node at the specified position (mid)
-        void insertAtMid(int val, int position) {
-            Node* newNode = new Node(val);
-            Node* current = head;
-
-            for (int i = 1; i < position - 1 && current != NULL; ++i) {
-                current = current->next;
-            }
-
-            if (current == NULL) {
-                std::cerr << "Invalid position for mid insertion." << std::endl;
-                return;
-            }
-
-            newNode->next = current->next;
-            current->next = newNode;
-        }
-
-        // Function to traverse the linked list and print its elements
-        void traverse() {
+        // Traverse the linked list and print its elements
+        void print() {
             Node* current = head;
             while (current != NULL) {
-                std::cout << current->data << " ";
+                std::cout << current->data << " -> ";
                 current = current->next;
             }
-            std::cout << std::endl;
+            std::cout << "NULL" << std::endl;
         }
 };
 
@@ -82,12 +48,12 @@ int main(){
     
     LinkedList linkedList;
 
-    linkedList.insertAtBeginning(40);
-    linkedList.insertAtBeginning(30);
-    linkedList.insertAtBeginning(20);
-    linkedList.insertAtBeginning(10);
+    linkedList.insertNode(40);
+    linkedList.insertNode(30);
+    linkedList.insertNode(20);
+    linkedList.insertNode(10);
 
-    linkedList.traverse();
+    linkedList.print();
 
     return 0;
 }

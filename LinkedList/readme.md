@@ -48,10 +48,10 @@ int main(){
     
     LinkedList linkedList;
 
-    linkedList.insertAtBeginning(40);
-    linkedList.insertAtBeginning(30);
-    linkedList.insertAtBeginning(20);
-    linkedList.insertAtBeginning(10);
+    linkedList.insertAtFirst(40);
+    linkedList.insertAtFirst(30);
+    linkedList.insertAtFirst(20);
+    linkedList.insertAtFirst(10);
 
     linkedList.traverse();
 
@@ -66,10 +66,10 @@ int main(){
     void traverse() {
         Node* current = head;
         while (current != NULL) {
-            std::cout << current->data << " ";
+            std::cout << current->data << " -> ";
             current = current->next;
         }
-        std::cout << std::endl;
+        std::cout << "NULL" << std::endl;
     }
 
 ```
@@ -81,7 +81,7 @@ int main(){
 <img src="img/insertAtStart.png" />
 
 ```
-    void insertAtBeginning(int val) {
+    void insertAtFirst(int val) {
         Node* newNode = new Node(val);
         newNode->next = head;
         head = newNode;
