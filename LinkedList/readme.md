@@ -28,7 +28,7 @@ public:
 
 #### Node 
 
-<img src="img/node.png"/> 
+<img src="img/node.png" width="400"/> 
 
 #### Singly Linked List Example
 
