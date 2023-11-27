@@ -28,11 +28,11 @@ public:
 
 #### Node 
 
-<img src="img/node.png" width="300"/> 
+<img src="img/node.png"/> 
 
 #### Singly Linked List Example
 
-<img src="img/list1.png" width="400"/> 
+<img src="img/list1.png"/> 
  
 - Node 10 is the head node of the list.
 - Node 40 is the tail node of the list.
